@@ -1,4 +1,4 @@
-$ShortcutPath = "$(Get-DesktopFolder)\WinUtil.lnk"
+$ShortcutPath = "$((New-Object -ComObject Shell.Application).NameSpace('shell:Desktop').Self.Path)\WinUtil.lnk"
 $TargetPath = "%windir%\System32\WindowsPowerShell\v1.0\powershell.exe"
 $Arguments = "-Command `"irm 'https://christitus.com/win' | iex`""
 $WScriptShell = New-Object -ComObject WScript.Shell
